@@ -47,7 +47,7 @@ A powerful PHP security assessment tool that analyzes `disable_functions` and `o
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dfunc-bypasser.git
+git clone https://github.com/l1nuxkid/dfunc-bypasser.git
 cd dfunc-bypasser
 
 # Install required packages

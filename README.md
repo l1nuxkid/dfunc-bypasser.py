@@ -1,10 +1,9 @@
-# dfunc-bypasser.py
-
 # DFunc-Bypasser - PHP Disabled Functions Bypass Scanner
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Security](https://img.shields.io/badge/security-pentesting-orange.svg)](https://github.com)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](https://github.com)
 
 A powerful PHP security assessment tool that analyzes `disable_functions` and `open_basedir` configurations, identifies available dangerous functions, and detects potential bypass techniques for legitimate penetration testing and security hardening.
 
@@ -12,11 +11,13 @@ A powerful PHP security assessment tool that analyzes `disable_functions` and `o
 
 - [Features](#-features)
 - [Installation](#-installation)
+- [Quick Start](#-quick-start)
 - [Usage Examples](#-usage-examples)
 - [Output Explanation](#-output-explanation)
 - [Bypass Methods Detected](#-bypass-methods-detected)
 - [Security Recommendations](#-security-recommendations)
 - [Configuration Hardening](#-configuration-hardening)
+- [Troubleshooting](#-troubleshooting)
 - [Disclaimer](#-disclaimer)
 - [License](#-license)
 
@@ -36,22 +37,36 @@ A powerful PHP security assessment tool that analyzes `disable_functions` and `o
 - **Multiple Input Sources**: Supports both URLs and local phpinfo files
 - **Color-Coded Output**: Easy-to-read terminal output
 - **Report Generation**: Save results to file for documentation
+- **Verbose Mode**: Detailed debugging information
+- **Custom User-Agent**: Bypass WAF restrictions
 
 ## 📦 Installation
 
 ### Prerequisites
 - Python 3.6 or higher
 - pip package manager
+- Git (for cloning repository)
 
-### Install Required Dependencies
+### Step-by-Step Installation
 
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/l1nuxkid/dfunc-bypasser.git
 cd dfunc-bypasser
 
-# Install required packages
+# 2. Install required packages
 pip3 install requests urllib3
 
-# Or install from requirements.txt
+# 3. Verify installation
+python3 dfunc-bypasser.py --help
+
+# Optional: Create requirements.txt and install from it
+cat > requirements.txt << EOF
+requests>=2.28.0
+urllib3>=1.26.0
+EOF
+
 pip3 install -r requirements.txt
+
+# Optional: Make script executable
+chmod +x dfunc-bypasser.py

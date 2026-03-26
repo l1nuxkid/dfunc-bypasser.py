@@ -70,3 +70,45 @@ pip3 install -r requirements.txt
 
 # Optional: Make script executable
 chmod +x dfunc-bypasser.py
+
+
+
+🚀 Quick Start
+
+# Basic scan with SSL verification
+python3 dfunc-bypasser.py --url https://example.com/phpinfo.php
+
+# Skip SSL verification (for self-signed certificates)
+python3 dfunc-bypasser.py --url https://192.168.1.100/phpinfo.php --no-verify-ssl
+
+# Scan from local file
+python3 dfunc-bypasser.py --file /path/to/saved/phpinfo.html
+
+# Save results to file
+python3 dfunc-bypasser.py --url https://example.com/phpinfo.php --output scan_results.txt
+
+
+Advanced Usage
+
+# Custom User-Agent to bypass WAF
+python3 dfunc-bypasser.py --url https://example.com/phpinfo.php \
+  --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+# Save results with timestamp
+python3 dfunc-bypasser.py --url https://example.com/phpinfo.php \
+  --output "scan_$(date +%Y%m%d_%H%M%S).txt"
+
+# Complete scan with all options
+python3 dfunc-bypasser.py \
+  --url https://example.com/phpinfo.php \
+  --no-verify-ssl \
+  --timeout 20 \
+  --user-agent "Security Scanner v1.0" \
+  --output results.txt \
+  --verbose
+
+
+
+
+
+
